@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --ff-wg-primary: 800;
+    --ff-wg-second: 600;
+    --ff-wg-third: 500;
+    --ff-wg-four: 400;
+/*  */
+    --ff-primary: 'Albert Sans', sans-serif;
+    --clr-primary: #172B4D;
+    --clr-secondary: white;
+/*  */
+    --bg-primary: white;
+    --bg-secondary: #111827;
+    --bg-btn: #0876DD;
+    --bg-ellipse: #CFFAFE;
+}
+
+/* HEADER 1º CONTAINER */
+.h-top-container{
+    width: 100%;
+    padding: 1rem 6rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-logo{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.h-logo img{
+    width: 100%;
+}
+
+.h-logo h1{
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-family: var(--ff-primary);
+    font-weight: var(--ff-wg-primary);
+    color: var(--clr-primary);
+}
+
+.h-top-btn{
+    font-size: calc(.5rem + .5vw);
+    border-radius: 6px;
+    padding: .7rem 1.2rem;
+    background-color: var(--bg-btn);
+    cursor: pointer;
+    border: none;
+}
+
+.h-top-btn a{
+    color: var(--clr-secondary);
+    font-family: var(--ff-primary);
+}
+
+/* HEADER 2º CONTAINER */
+.h-low-container{
+    width: 100%;
+    padding: 1rem 6rem;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
