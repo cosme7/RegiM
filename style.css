@@ -23,10 +23,15 @@
     --bg-ellipse: #CFFAFE;
 }
 
-/* HEADER 1º CONTAINER */
+/** HEADER 1º CONTAINER */
+header{
+    overflow: hidden;
+}
+
 .h-top-container{
-    width: 100%;
+    max-width: 1920px;
     padding: 1rem 6rem;
+    margin: 0 auto;
     background-color: var(--bg-primary);
     display: flex;
     justify-content: space-between;
@@ -44,7 +49,7 @@
 }
 
 .h-logo h1{
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-family: var(--ff-primary);
     font-weight: var(--ff-wg-primary);
     color: var(--clr-primary);
@@ -57,6 +62,8 @@
     background-color: var(--bg-btn);
     cursor: pointer;
     border: none;
+    position: relative;
+    z-index: 2;
 }
 
 .h-top-btn a{
@@ -64,12 +71,74 @@
     font-family: var(--ff-primary);
 }
 
-/* HEADER 2º CONTAINER */
+/** HEADER 2º CONTAINER */
 .h-low-container{
-    width: 100%;
-    padding: 1rem 6rem;
+    max-width: 1920px;
+    padding: 0 4rem 0 6rem;
+    margin: 0 auto;
     background-color: var(--bg-primary);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: .5rem;
+}
+
+.h-txt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.h-txt h2{
+    width: min(15ch, 50vw);
+    font-size: clamp(1.5rem, 4.5vw, 5rem);
+    font-weight: var(--ff-wg-second);
+    font-family: var(--ff-primary);
+    font-weight: var(--ff-wg-primary);
+}
+
+.h-txt p{
+    width: max(45ch, 40%);
+    font-size: clamp(.7rem, 1.2vw, 1.5rem);
+    font-weight: var(--ff-wg-four);
+    font-family: var(--ff-primary);
+    font-weight: var(--ff-wg-four);
+}
+
+.h-low-btn{
+    width: min(16vw, 10.5rem);
+    height: 2.5rem;
+    font-size: calc(.5rem + .5vw);
+    border-radius: 6px;
+    background-color: var(--bg-btn);
+    cursor: pointer;
+    border: none;
+}
+
+.h-low-btn a{
+    color: var(--clr-secondary);
+    font-family: var(--ff-primary);
+}
+
+.h-low-fig{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.h-low-fig img{
+    width: 100%;
+}
+
+/** HEADER ELLIPSE */
+.h-ellipse{
+    width: 55vw;
+    height: 50vw;
+    border-radius: 50%;
+    background-color: var(--bg-ellipse);
+    position: absolute;
+    top: -14.5rem;
+    right: -13rem;
+    z-index: -1;
 }
