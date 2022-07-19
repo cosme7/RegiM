@@ -67,15 +67,16 @@ header{
 }
 
 .h-top-btn a{
-    color: var(--clr-secondary);
+    font-weight: var(--ff-wg-second);
     font-family: var(--ff-primary);
+    color: var(--clr-secondary);
 }
 
 /** HEADER 2º CONTAINER */
 .h-low-container{
     max-width: 1920px;
     padding: 0 4rem 0 6rem;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     background-color: var(--bg-primary);
     display: flex;
     justify-content: center;
@@ -93,9 +94,8 @@ header{
 .h-txt h2{
     width: min(15ch, 50vw);
     font-size: clamp(1.5rem, 4.5vw, 5rem);
-    font-weight: var(--ff-wg-second);
-    font-family: var(--ff-primary);
     font-weight: var(--ff-wg-primary);
+    font-family: var(--ff-primary);
 }
 
 .h-txt p{
@@ -103,13 +103,11 @@ header{
     font-size: clamp(.7rem, 1.2vw, 1.5rem);
     font-weight: var(--ff-wg-four);
     font-family: var(--ff-primary);
-    font-weight: var(--ff-wg-four);
 }
 
 .h-low-btn{
     width: min(16vw, 10.5rem);
     height: 2.5rem;
-    font-size: calc(.5rem + .5vw);
     border-radius: 6px;
     background-color: var(--bg-btn);
     cursor: pointer;
@@ -117,8 +115,10 @@ header{
 }
 
 .h-low-btn a{
-    color: var(--clr-secondary);
+    font-size: calc(.5rem + .5vw);
+    font-weight: var(--ff-wg-second);
     font-family: var(--ff-primary);
+    color: var(--clr-secondary);
 }
 
 .h-low-fig{
@@ -133,12 +133,107 @@ header{
 
 /** HEADER ELLIPSE */
 .h-ellipse{
-    width: 55vw;
-    height: 50vw;
+    width: 52vw;
+    height: 52vw;
     border-radius: 50%;
     background-color: var(--bg-ellipse);
     position: absolute;
-    top: -14.5rem;
-    right: -13rem;
+    inset: -18rem 0 0 9rem;
     z-index: -1;
+}
+
+/** MAIN 1º CONTAINER */
+.main-wrapper{
+    max-width: 1920px;
+    padding: 0 4rem 0 6rem;
+    margin: 0 auto 4rem;
+    background-color: var(--bg-primary);
+}
+
+.main-top-container{
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.main-top-txt h2{
+    margin-bottom: .5rem;
+    font-size: clamp(1.5rem, 3.5vw, 4rem);
+    font-weight: var(--ff-wg-primary);
+    font-family: var(--ff-primary);
+}
+
+.main-top-txt p{
+    font-size: clamp(.7rem, 1.2vw, 1.5rem);
+    font-weight: var(--ff-wg-four);
+    font-family: var(--ff-primary);
+    text-align: center;
+}
+
+.main-top-fig img{
+    width: 100%;
+}
+
+.main-top-btn{
+    background-image: url('assets/main\ C1_02.svg');
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: -30px;
+    width: min(25vw, 18rem);
+    height: 3.5rem;
+    box-shadow: 0px 8px 16px -4px rgba(28, 44, 64, 0.08);
+    border-radius: 100px;
+    background-color: var(--bg-primary);
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    bottom: -1rem;
+}
+
+.main-top-btn a{
+    font-size: calc(.5rem + .5vw);
+    font-weight: var(--ff-wg-third);
+    font-family: var(--ff-primary);
+    margin-left: 2rem;
+}
+
+/** MAIN 2º CONTAINER */
+.main-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+
+.event-card, .registration-card, .branded-card,
+.app-card, .attend-card, .calendar-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card-h3{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: var(--ff-wg-primary);
+    font-family: var(--ff-primary);
+}
+
+.card-paragraph{
+    width: max(35ch, 20%);
+    font-size: clamp(.5rem, 1vw, 1rem);
+    font-weight: var(--ff-wg-four);
+    font-family: var(--ff-primary);
+    text-align: center;
 }
