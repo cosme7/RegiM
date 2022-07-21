@@ -607,7 +607,7 @@ header{
     }
 
     .main-top-txt h2{
-        width: 15ch;
+        width: 14ch;
         font-size: calc(.5rem + 8vw);
         text-align: center;
     }
