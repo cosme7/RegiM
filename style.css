@@ -223,6 +223,14 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+}
+
+.card-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: .5rem;
 }
 
@@ -381,8 +389,6 @@ header{
 @media (max-width:800px){
     :root{
         --spacer-one: 1rem 2rem;
-        --spacer-two: 1rem;
-        --spacer-three: 1rem 0 1rem 2rem;
     }
 
     /** HEADER 1º CONTAINER */
@@ -396,14 +402,14 @@ header{
 
     /** HEADER 2º CONTAINER */
     .h-low-container{
-        padding: 0;
+        padding: var(--spacer-one);
         flex-direction: column;
         align-items: flex-start;
     }
 
     .h-txt{
         width: 100%;
-        padding: var(--spacer-one);
+        margin-bottom: 2rem;
     }
 
     .h-txt h2{
@@ -416,7 +422,7 @@ header{
     }
 
     .h-low-btn{
-        width: 20vw;
+        width: 10rem;
         height: 2.5rem;
     }
 
@@ -424,24 +430,22 @@ header{
         font-size: calc(.5rem + 1vw);
     }
 
-    .h-low-fig{
-        padding: var(--spacer-one);
-    }
-
     .h-ellipse{
-        width: 90%;
-        height: 90%;
-        top: -4rem;
-        left: 7rem;
+        width: 100%;
+        height: 100%;
+        top: -8rem;
+        left: 5rem;
     }
 
     /** MAIN 1º CONTAINER */
     .main-wrapper{
+        margin: 0 auto 2rem;
         padding: var(--spacer-one);
     }
 
     .main-top-txt h2{
         font-size: calc(.5rem + 6vw);
+        text-align: center;
     }
 
     .main-top-txt p{
@@ -457,8 +461,8 @@ header{
     }
 
     .main-top-btn{
-        width: min(30vw, 15rem);
-        height: 3.5rem;
+        width: 12rem;
+        height: 3rem;
     }
 
     .main-top-btn a{
@@ -476,17 +480,18 @@ header{
     }
     
     .card-h3{
-        font-size: calc(.5rem + 2vw);
+        font-size: calc(.5rem + 1.5vw);
     }
     
     .card-paragraph{
-        font-size: calc(.5rem + 1vw);
+        font-size: calc(.2rem + 1.6vw);
     }
 
     /** MAIN 3º CONTAINER */
     .main-low-container{
         padding: var(--spacer-one);
         flex-direction: column;
+        margin: 0 auto 2rem;
     }
 
     .main-low-txt{
@@ -495,7 +500,7 @@ header{
     }
 
     .main-low-txt h2{
-        width: min(15ch, 65vw);
+        width: min(25ch, 80%);
         font-size: calc(.5rem + 6vw);
         text-align: center;
     }
@@ -518,9 +523,9 @@ header{
     }
 
     .main-low-ellipse{
-        width: 80vw;
-        height: 80vw;
-        left: 10%;
+        width: 85vw;
+        height: 85vw;
+        left: 7%;
         bottom: 12rem;
     }
 
@@ -535,11 +540,12 @@ header{
 
     .f-txt h2{
         font-size: calc(.5rem + 5vw);
+        text-align: center;
     }
     
     .f-txt p{
         width: max(65ch, 80%);
-        font-size: calc(.5rem + 1.2vw);
+        font-size: calc(.2rem + 1.5vw);
     }
 
     .f-btn{
@@ -547,7 +553,7 @@ header{
     }
     
     .f-btn a{
-        font-size: calc(.5rem + 1vw);
+        font-size: calc(.5rem + 1.5vw);
     }
 
     .f-fig{
@@ -567,4 +573,117 @@ header{
     .f-bottom-txt p{
         font-size: calc(.5rem + 1.2vw);
     }
+}
+
+@media (max-width:550px){
+    :root{
+        --spacer-two: 1rem;
+    }
+
+    /** HEADER 1º CONTAINER */
+    .h-top-container{
+        padding: var(--spacer-two);
+    }
+
+    /** HEADER 2º CONTAINER */
+    .h-low-container{
+        padding: var(--spacer-two);
+        gap: 2rem;
+    }
+
+    .h-txt p{
+        width: max(34ch, 40%);
+        font-size: calc(.5rem + 1.5vw);
+    }
+
+    .h-ellipse{
+        top: -3rem;
+        left: 4rem;
+    }
+
+    /** MAIN 1º CONTAINER */
+    .main-wrapper{
+        padding: var(--spacer-two);
+    }
+
+    .main-top-txt h2{
+        width: 15ch;
+        font-size: calc(.5rem + 8vw);
+        text-align: center;
+    }
+
+    .main-top-txt p{
+        font-size: calc(1rem + 1.5vw);
+    }
+
+     /** MAIN 2º CONTAINER */
+    .main-card{
+        grid-template-columns: 1fr;
+    }
+
+    .event-card, .registration-card, .branded-card,
+    .app-card, .attend-card, .calendar-card{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .card-wrapper{
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    .card-img{
+        width: 12vw;
+    }
+    
+    .card-h3{
+        font-size: calc(.8rem + 2vw);
+    }
+    
+    .card-paragraph{
+        width: max(30ch, 100%);
+        font-size: calc(.45rem + 1.5vw);
+        text-align: left;
+    }
+
+    /** MAIN 3º CONTAINER */
+    .main-low-container{
+        padding: var(--spacer-two);
+    }
+
+    .main-low-txt h2{
+        width: min(15ch, 100%);
+        padding-top: 2rem;
+        font-size: calc(.5rem + 8vw);
+    }
+
+    .tools-img{
+        width: 15vw;
+    }
+
+    .main-low-ellipse{
+        width: 85vw;
+        height: 85vw;
+        left: 7%;
+        bottom: 12rem;
+    }
+
+    /** FOOTER */
+    .f-container{
+        padding: var(--spacer-two);
+    }
+
+    .f-txt h2{
+        font-size: calc(1rem + 5vw);
+    }
+    
+    .f-txt p{
+        width: max(35ch, 45%);
+        font-size: calc(.5rem + 1.5vw);
+    }
+
+    .f-fig img{
+        width: 8vw;
+    } 
 }
